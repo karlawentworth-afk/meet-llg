@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#231F20">
+<link rel="icon" type="image/svg+xml" href="/img/llg-logo.svg">
+<meta property="og:title" content="Meet John Cheetham · Ladies Love Golf">
+<meta property="og:description" content="Improve. Socialise. Play. Coaching, events, trips and a golf school, built for women.">
+<meta property="og:image" content="/img/hero.jpg">
+<meta property="og:type" content="website">
+<title>Meet John · Ladies Love Golf</title>
+<meta name="description" content="John Cheetham, Class A PGA Professional and director of Ladies Love Golf. Improve. Socialise. Play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Semi+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: the business card, scaled up. Charcoal ground, tall condensed capitals, pink full stops, and the card's three words (Improve. Socialise. Play.) as the page's three chapters, each with a photo mosaic. One deliberate dark look, like the card. */
+:root {
+  --ink: #231F20;
+  --ink-2: #2E2A2B;
+  --ink-3: #3A3536;
+  --pink: #DE0082;
+  --pink-soft: #FF4FAE;
+  --white: #FFFFFF;
+  --mute: #BDB6B4;
+  --rule: #4A4445;
+  --display: "League Gothic", "Oswald", "Arial Narrow", Impact, sans-serif;
+  --body: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --label: "Barlow Semi Condensed", "Barlow", "Arial Narrow", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: var(--pink-soft); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--pink-soft); outline-offset: 3px; border-radius: 4px; }
+.wrap {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.big {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+  margin: 0;
+  text-wrap: balance;
+}
+.dot { color: var(--pink); }
+.label {
+  font-family: var(--label);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+p { margin: 0; max-width: 60ch; }
+.lede { font-size: 1.25rem; color: #EDE8E6; }
+
+/* Buttons */
+.btns { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 3.1rem; padding: 0.6rem 1.5rem;
+  border-radius: 999px; font: 600 1rem var(--label); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  border: 2px solid var(--pink); cursor: pointer;
+}
+.btn-pink { background: var(--pink); color: var(--white); }
+.btn-line { background: transparent; color: var(--white); border-color: var(--white); }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; background: var(--ink); }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; max-width: none; }
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(35,31,32,0.94) 0%, rgba(35,31,32,0.78) 42%, rgba(35,31,32,0.15) 75%, rgba(35,31,32,0) 100%),
+              linear-gradient(0deg, rgba(35,31,32,1) 0%, rgba(35,31,32,0) 28%);
+}
+.hero-inner { position: relative; z-index: 1; padding-block: 1.4rem 4.5rem; display: flex; flex-direction: column; gap: 2.2rem; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.topbar img { width: 44px; height: 45px; }
+.hero h1 { font-size: clamp(3.4rem, 12.5vw, 9.5rem); }
+.hero h1 .name { color: var(--pink); display: block; }
+.hero-sub { display: flex; flex-direction: column; gap: 1.4rem; max-width: 36rem; }
+.creds { font-family: var(--label); font-weight: 500; font-size: 1.05rem; letter-spacing: 0.06em; text-transform: uppercase; color: #E7E1DF; }
+.creds b { color: var(--white); font-weight: 600; }
+
+/* Gap */
+.gap { background: var(--pink); color: var(--white); }
+.gap .wrap { padding-block: 3.2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2rem 3rem; align-items: end; }
+.gap .fig { display: flex; flex-direction: column; gap: 0.3rem; }
+.gap .fig b { font-family: var(--display); font-weight: 400; font-size: clamp(4.5rem, 10vw, 7rem); line-height: 0.9; }
+.gap .fig small { font-family: var(--label); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+.gap p.say { font-size: 1.2rem; color: var(--white); }
+
+/* Chapters */
+.chapter { padding-block: 5rem 4rem; border-bottom: 1px solid var(--rule); }
+.chapter-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 1.5rem 4rem; align-items: start; margin-bottom: 2.6rem; }
+.chapter h2 { font-size: clamp(5rem, 16vw, 11rem); }
+.chapter-copy { display: flex; flex-direction: column; gap: 1.2rem; padding-top: 0.8rem; min-width: 0; }
+.items { list-style: none; margin: 0.4rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--rule); }
+.items li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1rem; padding-block: 0.9rem; border-bottom: 1px solid var(--rule); }
+.items .k { font-family: var(--display); font-size: 1.7rem; line-height: 1.05; text-transform: uppercase; }
+.items .v { color: #E2DCDA; font-size: 1.05rem; }
+
+/* Mosaics */
+.mosaic { display: grid; gap: 10px; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.mosaic figure { margin: 0; overflow: hidden; border-radius: 6px; background: var(--ink-2); min-width: 0; }
+.mosaic img { width: 100%; height: 100%; object-fit: cover; }
+.m-a { grid-column: span 3; grid-row: span 2; aspect-ratio: 1 / 1; }
+.m-b { grid-column: span 3; aspect-ratio: 2 / 1; }
+.m-c { grid-column: span 3; aspect-ratio: 2 / 1; }
+.m-d { grid-column: span 2; aspect-ratio: 4 / 3; }
+.m-e { grid-column: span 2; aspect-ratio: 4 / 3; }
+.m-f { grid-column: span 2; aspect-ratio: 4 / 3; }
+
+/* School */
+.school { background: var(--ink-2); }
+.school .wrap { padding-block: 5rem; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 3rem; align-items: center; }
+.school figure { margin: 0; border-radius: 6px; overflow: hidden; aspect-ratio: 3 / 4; max-width: 100%; }
+.school figure img { width: 100%; height: 100%; object-fit: cover; }
+.school h2 { font-size: clamp(3.6rem, 8vw, 6rem); }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem 1.6rem; margin-top: 0.6rem; }
+.facts div { border-top: 2px solid var(--pink); padding-top: 0.6rem; }
+.facts b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.8rem; text-transform: uppercase; line-height: 1.05; }
+.facts span { color: var(--mute); font-size: 1rem; }
+
+/* Numbers */
+.numbers .wrap { padding-block: 4.5rem; }
+.num-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 2rem 1.5rem; margin-top: 1.6rem; }
+.num-grid div { display: flex; flex-direction: column; gap: 0.3rem; }
+.num-grid b { font-family: var(--display); font-weight: 400; font-size: clamp(3.6rem, 7vw, 5rem); line-height: 0.9; color: var(--pink-soft); font-variant-numeric: tabular-nums; }
+.num-grid span { color: #E2DCDA; font-size: 1rem; }
+.wide-photo { margin: 0; aspect-ratio: 21 / 8; overflow: hidden; max-width: 100%; }
+.wide-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+
+/* John */
+.john .wrap { padding-block: 5rem; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3rem; align-items: center; }
+.john figure { margin: 0; border-radius: 6px; overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; }
+.john figure img { width: 100%; height: 100%; object-fit: cover; }
+.john h2 { font-size: clamp(3.6rem, 8vw, 6rem); }
+.john h2 .name { color: var(--pink); }
+.quote { font-family: var(--display); font-size: clamp(1.9rem, 3.6vw, 2.6rem); line-height: 1.05; text-transform: uppercase; border-left: 4px solid var(--pink); padding-left: 1rem; max-width: 22ch; }
+.why { background: var(--ink-2); border-radius: 6px; padding: 1.1rem 1.2rem; }
+
+/* Asks */
+.asks .wrap { padding-block: 4.5rem 5rem; }
+.ask-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1.8rem; }
+.ask { border: 1px solid var(--rule); border-radius: 6px; padding: 1.3rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
+.ask h3 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1; text-transform: uppercase; margin: 0; }
+.ask p { color: #D9D2D0; font-size: 1.02rem; }
+
+/* Contact */
+.contact { background: var(--pink); }
+.contact .wrap { padding-block: 4.5rem; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
+.contact h2 { font-size: clamp(4rem, 10vw, 7.5rem); }
+.contact h2 .dk { color: var(--ink); }
+.contact-card { background: var(--ink); border-radius: 12px; padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.email { font-family: var(--label); font-weight: 600; font-size: 1.25rem; letter-spacing: 0.03em; word-break: break-all; user-select: all; }
+.copy { min-height: 2.8rem; padding: 0.4rem 1.2rem; font-size: 0.9rem; align-self: flex-start; }
+.links { display: flex; flex-direction: column; gap: 0.3rem; }
+.foot .wrap { padding-block: 2.5rem 3.5rem; display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; }
+.foot .big { font-size: 2.4rem; }
+.tee { width: 46px; height: 86px; flex: none; }
+
+@media (max-width: 860px) {
+  .chapter-head, .school .wrap, .john .wrap, .contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .school figure { aspect-ratio: 4 / 3; }
+  .john figure { order: -1; }
+  .mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .m-a { grid-column: span 2; grid-row: auto; aspect-ratio: 4 / 3; }
+  .m-b, .m-c { grid-column: span 2; aspect-ratio: 16 / 9; }
+  .m-d, .m-e { grid-column: span 1; aspect-ratio: 1 / 1; }
+  .m-f { display: none; }
+  .hero::after { background: linear-gradient(0deg, rgba(35,31,32,1) 0%, rgba(35,31,32,0.82) 45%, rgba(35,31,32,0.35) 100%); }
+  .hero-inner { padding-block: 1.2rem 3rem; }
+  .hero-spacer { height: 16vh; }
+}
+@media (max-width: 520px) {
+  .items li { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .wide-photo { aspect-ratio: 4 / 3; }
+}
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <img class="hero-img" src="/img/hero.jpg" alt="A woman tees off under palm trees at sunset while her friend waits in the buggy">
+  <div class="wrap hero-inner">
+    <div class="topbar">
+      <img src="/img/llg-logo.svg" alt="Ladies Love Golf">
+      <span class="label">IGTM Cannes · 19 to 22 Oct 2026</span>
+    </div>
+    <div class="hero-spacer" aria-hidden="true"></div>
+    <h1 class="big">
+      <span class="name">John Cheetham<span style="color:var(--white)">.</span></span>
+      Improve<span class="dot">.</span><br>Socialise<span class="dot">.</span><br>Play<span class="dot">.</span>
+    </h1>
+    <div class="hero-sub">
+      <p class="creds"><b>Class A PGA Professional</b> · Director, Ladies Love Golf · Exclusive women's partner of Golfbreaks</p>
+      <p class="lede">You've got my card. Here's the rest of the story: we get women into golf, keep them in it, and then take them travelling.</p>
+      <div class="btns">
+        <a class="btn btn-pink" href="#talk">Let's talk</a>
+        <a class="btn btn-line" href="#improve">See what we do</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="gap" aria-label="Why women's golf">
+  <div class="wrap">
+    <div class="fig"><b>1 in 3</b><span>new golfers in the UK is a woman.</span><small>R&amp;A Participation Report, 2024</small></div>
+    <div class="fig"><b>2%</b><span>of golf club members in England are women under 50.</span><small>England Golf, 2025</small></div>
+    <p class="say">The interest is there. The game loses her somewhere between her first lesson and her first tee. That gap is exactly where we work.</p>
+  </div>
+</section>
+
+<section class="chapter" id="improve">
+  <div class="wrap">
+    <div class="chapter-head">
+      <h2 class="big">Improve<span class="dot">.</span></h2>
+      <div class="chapter-copy">
+        <p class="lede">Coaching built around how women actually learn. Less jargon, more hybrids, and nobody judging the shot that went sideways.</p>
+        <ul class="items">
+          <li><span class="k">Weekly coaching</span><span class="v">Twelve women, ninety minutes, a friendly range near home. The Beeches, Branston, Chilli Dip, Golf Kingdom Rossendale and Tudor Park.</span></li>
+          <li><span class="k">Online learning</span><span class="v">For women who can't get to us. A video library, a step by step Beginner to Improver programme and weekly tips, all in the LLG app.</span></li>
+          <li><span class="k">On trips too</span><span class="v">Every trip comes with proper coaching from our PGA pros, so the week away makes her better, not just browner.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mosaic">
+      <figure class="m-a"><img src="/img/imp1.jpg" alt="A coach demonstrates a swing to a group of women on a sunny practice ground" loading="lazy"></figure>
+      <figure class="m-b"><img src="/img/imp3.jpg" alt="A group of women watch a putting lesson on a green" loading="lazy"></figure>
+      <figure class="m-c"><img src="/img/imp2.jpg" alt="John coaching two women with alignment sticks" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="socialise">
+  <div class="wrap">
+    <div class="chapter-head">
+      <h2 class="big">Socialise<span class="dot">.</span></h2>
+      <div class="chapter-copy">
+        <p class="lede">This is the bit that keeps her coming back. Women who met on the range end up as the four who book the tee time together.</p>
+        <ul class="items">
+          <li><span class="k">Socials</span><span class="v">Evenings out, nine holes and a drink. 75 women came to our Summer Social.</span></li>
+          <li><span class="k">Pairs Event</span><span class="v">Bring a friend, play as a team. 60 women at the very first one.</span></li>
+          <li><span class="k">Annual Gala</span><span class="v">Golf, dinner and a full room at Carden Park.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mosaic">
+      <figure class="m-a"><img src="/img/soc2.jpg" alt="A big group of women with their clubs at sunset on the range" loading="lazy"></figure>
+      <figure class="m-b"><img src="/img/soc5.jpg" alt="Five women laughing as they walk their trolleys down a fairway at sunset" loading="lazy"></figure>
+      <figure class="m-c"><img src="/img/soc1.jpg" alt="A trip group dressed up for dinner under festoon lights" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="play">
+  <div class="wrap">
+    <div class="chapter-head">
+      <h2 class="big">Play<span class="dot">.</span></h2>
+      <div class="chapter-copy">
+        <p class="lede">Coached golf trips in the UK and abroad with Golfbreaks. She saves for it, trains for it all winter, and comes home already asking about the next one.</p>
+        <ul class="items">
+          <li><span class="k">All handled</span><span class="v">Flights, hotels, tee times, coaching, and the rooming conversations nobody enjoys.</span></li>
+          <li><span class="k">They sell out</span><span class="v">Two sold out weeks at Costa Navarino this year. The second one went in two hours.</span></li>
+          <li><span class="k">Year round</span><span class="v">A date in the diary is what keeps her practising in January.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mosaic">
+      <figure class="m-a"><img src="/img/play1.jpg" alt="A group of women in matching blue polos jumping for joy on a sunny course" loading="lazy"></figure>
+      <figure class="m-b"><img src="/img/play5.jpg" alt="Twenty women in matching polos lined up on a green by the sea" loading="lazy"></figure>
+      <figure class="m-c"><img src="/img/play2.jpg" alt="Women piled on and around a golf buggy, waving" loading="lazy"></figure>
+      <figure class="m-d"><img src="/img/play3.jpg" alt="Four women on a tee in front of a lake and villas" loading="lazy"></figure>
+      <figure class="m-e"><img src="/img/play4.jpg" alt="A putting lesson in a circle on a hillside green" loading="lazy"></figure>
+      <figure class="m-f"><img src="/img/soc4.jpg" alt="A woman laughing with driver headcovers on her hands like boxing gloves" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="school" aria-labelledby="school-h">
+  <div class="wrap">
+    <figure><img src="/img/school.jpg" alt="John guiding a woman's hands through a swing on the practice ground" loading="lazy"></figure>
+    <div class="chapter-copy">
+      <span class="label">New for 2026</span>
+      <h2 class="big" id="school-h">The Women's European Golf School<span class="dot">.</span></h2>
+      <p class="lede">Four nights at Camiral on the Costa Brava, home of the 2031 Ryder Cup. Three days of proper coaching and tracked rounds, then a 90 day programme so it sticks once she's home.</p>
+      <div class="facts">
+        <div><b>Eight women</b><span>per school, handicaps roughly 12 to 26</span></div>
+        <div><b>Class A PGA</b><span>coaching, plus performance coach Karl Morris</span></div>
+        <div><b>Every shot tracked</b><span>with Shot Scope, so she sees what's really costing her</span></div>
+        <div><b>Nov · Apr · Jun</b><span>November 2026, then April and June 2027</span></div>
+      </div>
+      <div class="btns"><a class="btn btn-line" href="https://llggolfschool.com/school" target="_blank" rel="noopener">See the school</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers" aria-labelledby="num-h">
+  <figure class="wide-photo"><img src="/img/crowd.jpg" alt="A trip group with glasses raised on the course at the end of the day, coaches kneeling at the front" loading="lazy"></figure>
+  <div class="wrap">
+    <h2 class="big" id="num-h" style="font-size:clamp(3rem,7vw,5rem)">This year<span class="dot">.</span></h2>
+    <div class="num-grid">
+      <div><b>4,000+</b><span>women on our database</span></div>
+      <div><b>75</b><span>at our Summer Social</span></div>
+      <div><b>60</b><span>at our first Pairs Event</span></div>
+      <div><b>2 weeks</b><span>sold out at Costa Navarino</span></div>
+      <div><b>11 years</b><span>of coaching women, almost nothing else</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="john" aria-labelledby="john-h">
+  <div class="wrap">
+    <div class="chapter-copy">
+      <span class="label">The man on the card</span>
+      <h2 class="big" id="john-h">Who's <span class="name">John</span><span class="dot">.</span></h2>
+      <p>John is a Class A PGA Professional and a director of Ladies Love Golf. He has spent his career teaching women, and he's the reason the coaching works, from the weekly range sessions to the golf school at Camiral.</p>
+      <p class="quote">Most of our women will never hit a four iron, and they'll never need to.</p>
+      <p class="why"><strong>Why he's in Cannes:</strong> he's here as a guest of Golfbreaks, our trip partner. He'd love to meet resorts, destinations and operators who want more women on their tee sheets, and a partner who already knows how to fill them.</p>
+    </div>
+    <figure><img src="/img/john.jpg" alt="John taking a selfie with three smiling women on a clifftop tee by the sea" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="asks" aria-labelledby="asks-h">
+  <div class="wrap">
+    <h2 class="big" id="asks-h" style="font-size:clamp(3rem,7vw,5rem)">Where we could help you<span class="dot">.</span></h2>
+    <div class="ask-grid">
+      <div class="ask"><h3>Resorts &amp; destinations</h3><p>Coached groups of women who book together, come back, and tell their friends. Shoulder season included.</p></div>
+      <div class="ask"><h3>Tour operators</h3><p>A women's golf product that already works, with the coaching and the community that sell it.</p></div>
+      <div class="ask"><h3>Golf clubs</h3><p>Ladies' section quiet from November to March? Give them a trip to train for.</p></div>
+      <div class="ask"><h3>Brands &amp; partners</h3><p>A loyal audience of women golfers who listen to us because we've helped them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="talk" aria-labelledby="talk-h">
+  <div class="wrap">
+    <h2 class="big" id="talk-h">Let's talk<span class="dk">.</span><br><span class="dk">After Cannes<span style="color:var(--white)">.</span></span></h2>
+    <div class="contact-card">
+      <span class="label">Drop us a line and mention IGTM</span>
+      <span class="email" id="email">info@ladieslovegolf.com</span>
+      <button class="btn btn-pink copy" id="copyBtn" type="button">Copy email</button>
+      <div class="links">
+        <a href="https://ladieslovegolf.com" target="_blank" rel="noopener">ladieslovegolf.com</a>
+        <a href="https://llggolfschool.com/school" target="_blank" rel="noopener">llggolfschool.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="big">Improve<span class="dot">.</span> Socialise<span class="dot">.</span> Play<span class="dot">.</span></p>
+    <svg class="tee" viewBox="0 0 80 150" role="img" aria-label="A heart sitting on a golf tee">
+      <path fill="#DE0082" d="M40 66s-25-15.3-32-31.3C3 23 10 11 22 11c7 0 12 4 18 10.7C46 15 51 11 58 11c12 0 19 12 14 23.7C65 50.7 40 66 40 66z"></path>
+      <path fill="#FFFFFF" d="M22 72h36l-12 12h-12z"></path>
+      <rect fill="#FFFFFF" x="36" y="84" width="8" height="54"></rect>
+      <path fill="#FFFFFF" d="M36 138h8l-4 10z"></path>
+    </svg>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copyBtn');
+  var email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = email.textContent.trim();
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, now copy';
+    }
+    try { navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copied'; }, selectIt); }
+    catch (e) { selectIt(); }
+    setTimeout(function () { btn.textContent = 'Copy email'; }, 2500);
+  });
+})();
+</script>
+
+</body>
+</html>
